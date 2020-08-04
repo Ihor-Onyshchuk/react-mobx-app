@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
 import App from './App';
+
+import { NotesProvider } from './NotesContext';
+
+import './index.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <NotesProvider>
+      <App />
+    </NotesProvider>,
+   </React.StrictMode>,
   document.getElementById('root')
 );
